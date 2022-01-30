@@ -10,7 +10,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
 
 const app = express();
-const PORT=process.env.PORT || 3000;
+const port=process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
@@ -27,7 +27,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(process.env.MONGO_DB, {  useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_DB, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema ({
@@ -176,6 +176,6 @@ app.post("/login", function(req, res){
 
 
 
-app.listen(PORT, () => {
-    console.log("Server is running on port " + PORT);
+app.listen(port, () => {
+    console.log("Server is running on port " + port);
   });
