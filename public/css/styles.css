@@ -1,11 +1,17 @@
 
 body {
     background-color: #E8ECEF;
+    background-image: url("../asset/images/background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   .centered {
       padding-top: 200px;
       text-align: center;
+      opacity: 0.8;
   }
   
   .secret-text {
@@ -14,4 +20,12 @@ body {
     color: #fff;
     background-color: #000;
   }
-  
+
+  .secret-text:hover {
+    color: rgb(223, 168, 19);
+  }
+
+  .text-center {
+    opacity: 0.8;
+  }
+
